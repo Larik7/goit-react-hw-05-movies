@@ -14,7 +14,7 @@ export const SearchBox = ({ onSubmit }) => {
   const handelSubmit = event => {
     event.preventDefault();
     if (query.trim() === '') {
-      toast.error('Please enter your search query :)');
+      toast.error('Enter your search query');
       return;
     }
     onSubmit(query);

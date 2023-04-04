@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./SharedLayout/SharedLayout";
 
 const Movies = lazy(() => import("../pages/Movie"));
-const Home = lazy(() => import("../pages/Home"));
+const Home = lazy(() => import("../pages/Home/Home"));
 const MovieDetails = lazy(() => import("../pages/MovieDetails"));
 const Cast = lazy(() => import("./Cast"));
 const Reviews = lazy(() => import("./Reviews"));

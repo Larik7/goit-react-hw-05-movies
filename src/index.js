@@ -11,6 +11,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-
-// ключ 4d6a2af1b1f413d275c2f06226268228
