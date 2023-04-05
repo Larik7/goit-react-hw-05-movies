@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
-import {Container} from './Home.styled'
+import { Loader } from 'components/Loader/Loader';
+import { MovieList } from 'components/MoviesList/MoviesList';
+import { fetchTrendingMovies } from 'servise/Api';
+import {Container} from './Home.styled';
 
 
 const Home = () => {
