@@ -11,6 +11,7 @@ export const MovieLink = styled(Link)`
   }
 `;
 export const List = styled.ul`
+  list-style-type: none;
   padding: 20px 0 20px;
   margin: 0;
   display: flex;

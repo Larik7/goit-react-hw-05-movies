@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from 'servise/Api';
 import { Loader } from 'components/Loader/Loader';
-import { GoBack } from 'components/GoBack/GoBack';
+import { BackLink } from 'components/BackLink/BackLink';
 import { Suspense } from 'react';
-import { Container } from './MovieDetails.styled';
+import {
+  Container,
+  Information,
+  AddInfo,
+  Info,
+  Text,
+  Span,
+  Item,
+  InfoLink,
+} from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -15,15 +23,15 @@ const MovieDetails = () => {
 
   useEffect(() => {
     fetchMovieDetails(movieId).then(responseMovieId => {
-      setMovieDetail(responseMovieId);
+      setMovieDetails(responseMovieId);
     });
   }, [movieId]);
 
-  const { poster_path, title, vote_average, overview, genres } = movieDetail;
+  const { poster_path, title, vote_average, overview, genres } = movieDetails;
 
   return (
     <>
-      <GoBack to={backLinkHref} />
+      <BackLink to={backLinkHref} />
       <Container>
         <Information>
           {poster_path ? (

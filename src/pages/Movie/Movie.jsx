@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { MovieContainer } from './Movie.styled';
 import { fetchSearchMovies } from 'servise/Api';
-import { SearchBox } from 'components/SearchBox/SearchBox';
+import { SearchBox } from 'components/Searchbox/Searchbox';
 import { MovieList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
-import { Toaster } from 'react-hot-toast';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -35,8 +34,6 @@ const Movies = () => {
   const handelSubmit = query => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
-    console.log(nextParams);
-    // setMovies([]);
   };
 
   return (
@@ -45,7 +42,6 @@ const Movies = () => {
       <SearchBox onSubmit={handelSubmit} />
       {movies.length > 0 && <MovieList movies={movies} />}
       {loading && <Loader />}
-      <Toaster duration={1500} position="top-right" reverseOrder={false} />
     </MovieContainer>
   );
 };

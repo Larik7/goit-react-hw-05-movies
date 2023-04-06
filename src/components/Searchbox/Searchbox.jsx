@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { toast } from "react-toastify";
+import { toast } from 'react-toastify';
 import { useState } from 'react';
 import { Wrapper, Input, Icon } from './Searchbox.styled';
 
@@ -23,7 +23,7 @@ export const SearchBox = ({ onSubmit }) => {
 
   return (
     <Wrapper>
-          <form onSubmit={handelSubmit}>
+      <form onSubmit={handelSubmit}>
         <Input
           type="text"
           name="query"

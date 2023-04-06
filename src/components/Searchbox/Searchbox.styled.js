@@ -20,4 +20,5 @@ export const Icon = styled(HiSearch)`
   height: 20px;
   position: absolute;
   right: 6px;
+  top: 6px;
 `;
