@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const Container = styled.div`
   max-width: 960px;
@@ -34,23 +34,19 @@ export const Link = styled(NavLink)`
   }
 `;
 
-export const Footer = styled.footer`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 8px 0;
-  margin-top: 16px;
-  border-top: 1px solid black;
-  background-color: red;
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  height: 30px;
-  width: 100%;
-`;
+// export const Footer = styled.footer`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 12px;
+//   padding: 8px 0;
+//   margin-top: 16px;
+//   border-top: 1px solid black;
+//   background-color: red;
+// `;
 
-export const FooterText = styled.p`
-  font-weight: 700;
-  margin: 0;
-`;
+
+// export const FooterText = styled.p`
+//   font-weight: 700;
+//   margin: 0;
+// `;
